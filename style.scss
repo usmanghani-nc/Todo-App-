@@ -1,0 +1,227 @@
+$green:#86c232;
+$bg:#222629;
+$line:#474b4a;
+$line2:#6b6e70;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+
+
+
+    .wrapper {
+        width: 80%;
+        min-height: 100vh;
+        margin: 30px auto;
+        padding: 20px 10px;
+        background-color: $bg;
+        color: $line2;
+
+        .heading {
+            text-align: center;
+        }
+
+        #error {
+            position: absolute;
+            height: 150px;
+            width: 80%;
+            left: 30%;
+            top: 30%;
+
+            .error {
+                position: relative;
+                color: red;
+                background: #ffff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: #474b4a 1px solid;
+                border-radius: 12px;
+                height: 150px;
+                width: 50%;
+
+                span {
+                    position: absolute;
+                    top: 5%;
+                    right: 5%;
+                    cursor: pointer;
+                }
+
+            }
+
+            transition: 0.3s ease-in-out;
+            animation-name: fadeIn;
+            animation-fill-mode: both;
+            animation-duration: 0.3s;
+
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0%, 0)
+                }
+            }
+
+
+
+
+
+            display: none;
+        }
+
+
+        form {
+            display: flex;
+            margin-top: 1rem;
+            border: 4px solid $green;
+            border-radius: 5px;
+
+            input {
+                width: 100%;
+                height: 35px;
+                padding-left: 15px;
+                background-color: $bg;
+                box-shadow: none;
+                outline: none;
+                border: none;
+                margin: none;
+                border-radius: 5px;
+
+                &:focus {
+                    color: $line2;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+
+            button {
+                background-color: $bg;
+                border: none;
+                margin: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 5px;
+
+                span {
+                    color: $green;
+                    margin-right: 14px;
+                    font-size: 20px;
+
+                }
+            }
+        }
+
+
+        ul {
+            margin: 20px auto;
+            width: 90%;
+
+            // overflow: none;
+            li {
+                list-style-type: none;
+                display: flex;
+                font-size: 20px;
+                margin: 20px 0;
+                border: 3px solid #474b4a;
+                border-radius: 5px;
+                padding: 10px 5px;
+                justify-content: space-between;
+                transition: 0.3s ease-in-out;
+                transform: scale(0.95);
+
+                &:hover {
+                    transform: scale(0.99);
+                }
+
+                p {
+                    color: #ffff;
+
+                    &[contenteditable="true"] {
+                        border: #86c232;
+                        padding: 5px 10px;
+                        background: #6b6e70;
+                        border: 1px $green solid;
+
+                        &:focus {
+                            outline: 0;
+                        }
+                    }
+                }
+
+                button {
+                    background-color: $bg;
+                    border: none;
+                    margin: none;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    color: $line2;
+                    transition: 0.3s ease-in-out;
+
+                    svg {
+                        pointer-events: none;
+                        font-size: 20px;
+                    }
+
+                }
+
+                .de-btn {
+                    width: 50px;
+                    display: flex;
+                    justify-content: space-between
+                }
+
+
+                #btnDelet,
+                #btnEditt {
+                    &:nth-child(1) {
+                        padding-top: 2px;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+
+                    &:hover {
+                        color: $green;
+                    }
+
+
+                    width: 22px !important;
+                    height: 22px !important;
+                }
+
+                .active {
+                    color: $green;
+                    transition: 0.3s ease-in-out;
+                }
+
+                .compelet {
+                    color: $line;
+                    font-family: monospace;
+                    text-decoration-line: line-through;
+                    text-decoration-line: $green;
+                }
+
+
+            }
+
+            .border {
+                border: 3px solid $green !important;
+            }
+        }
+    }
+}

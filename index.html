@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="heading">
+            <h1> <span><i class="fas fa-clipboard-list"></i></span> Todo</h1>
+        </div>
+        <form>
+            <input type="text" id="input">
+            <button id="btnAdd"><span><i class="far fa-plus-square"></i></span></button>
+        </form>
+
+        <div id="error">
+            <div class="error">
+                <span id="close"><i class="far fa-times-circle"></i></span>
+                <p>Fill up the text****</p>
+            </div>
+        </div>
+        <ul id="ul">
+        </ul>
+    </div>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
